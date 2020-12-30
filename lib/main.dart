@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 //import 'package:notepraiya_github_io/hello_word.dart';
 import 'landing.dart';
 
@@ -14,10 +15,9 @@ class MatApp extends StatelessWidget {
     return MaterialApp(
       title: app_title,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
-      home: Landing(),
+      home: Landing(app_title),
     );
   }
 }
-
