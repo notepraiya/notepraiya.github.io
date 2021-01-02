@@ -26,4 +26,6 @@ flutter:
     - family: Redressed
       fonts:
         - asset: fonts/Redressed/Redressed-Regular.ttf
+  assets:
+    - assets/img/runze-shi-1kIyfRdLMxI-unsplash.jpg
 

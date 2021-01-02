@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 //import 'package:notepraiya_github_io/hello_word.dart';
-import 'landing.dart';
+import 'landing_gridview.dart';
+import 'landing_sliver.dart';
 
 const app_title = "NotePraiya's Portfolio";
 
@@ -17,7 +18,8 @@ class MatApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: Landing(app_title),
+      //home: LandingGridView(app_title),
+      home: LandingSliver(),
     );
   }
 }
