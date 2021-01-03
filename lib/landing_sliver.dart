@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LandingSliver extends StatelessWidget {
+  final title;
+
+  LandingSliver(this.title);
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -12,8 +16,15 @@ class LandingSliver extends StatelessWidget {
             pinned: true,
             expandedHeight: height / 2.5,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(
-                '-',
+              title: TextButton(
+                child: Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.grey[800],
+                    fontFamily: 'Redressed',
+                    fontSize: 24.0,
+                  ),
+                ),
               ),
               background: Stack(
                 fit: StackFit.expand,
@@ -84,7 +95,7 @@ class LandingSliver extends StatelessWidget {
 
           SliverToBoxAdapter(
             child: Container(
-              color: Colors.tealAccent,
+              color: Theme.of(context).primaryColor,
               height: 45,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -92,10 +103,12 @@ class LandingSliver extends StatelessWidget {
                   Text('Design by Praiya Kitpaisan, Photo by '),
                   TextButton(
                     onPressed: () {
-                      print('https://unsplash.com/@wizard_s?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText');
+                      print(
+                          'https://unsplash.com/@wizard_s?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText');
                     },
                     child: Text(
                       'Runze Shi',
+                      style: TextStyle(color: Colors.white70),
                     ),
                   ),
                   Text(' on '),
@@ -106,6 +119,7 @@ class LandingSliver extends StatelessWidget {
                     },
                     child: Text(
                       'Unsplash',
+                      style: TextStyle(color: Colors.white70),
                     ),
                   ),
                 ],

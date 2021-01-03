@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'color.dart';
 //import 'package:notepraiya_github_io/hello_word.dart';
 import 'landing_gridview.dart';
 import 'landing_sliver.dart';
@@ -16,10 +17,11 @@ class MatApp extends StatelessWidget {
     return MaterialApp(
       title: app_title,
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: colorTealAccentCustom,
+        accentColor: Colors.pinkAccent,
       ),
       //home: LandingGridView(app_title),
-      home: LandingSliver(),
+      home: LandingSliver(app_title),
     );
   }
 }
